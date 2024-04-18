@@ -11,6 +11,15 @@ header {
     padding: 20px;
 }
 
+header {
+        position: relative; /* Add position relative to position the image */
+    }
+    header img {
+        width: 100%; /* Set the width of the image to 100% of its container */
+        max-height: 200px; /* Set a maximum height for the image */
+        object-fit: cover; /* Ensure the image covers the entire space */
+    }
+
 nav ul {
     list-style-type: none;
     padding: 0;
