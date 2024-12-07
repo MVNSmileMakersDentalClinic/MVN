@@ -99,29 +99,38 @@
             font-size: 1rem;
             color: #555;
         }
-        .cta {
-            background: linear-gradient(to right, #00aaff, #0077cc);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            margin: 2rem 0;
+        .doctors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
         }
-        .cta h2 {
-            font-size: 2rem;
-        }
-        .cta button {
+        .doctor-card {
             background: white;
-            color: #0077cc;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s, color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
         }
-        .cta button:hover {
-            background: #005f80;
-            color: white;
+        .doctor-card:hover {
+            transform: scale(1.05);
+        }
+        .doctor-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .doctor-card h3 {
+            color: #0077cc;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+        .doctor-card p {
+            font-size: 1rem;
+            padding: 0 1rem 1rem;
+            color: #555;
         }
         footer {
             background: #333;
@@ -183,9 +192,20 @@
     </div>
 </div>
 
-<div class="cta">
-    <h2>Schedule Your Appointment Today!</h2>
-    <button>Book Now</button>
+<div class="content" id="doctors">
+    <h2>Our Doctors</h2>
+    <div class="doctors">
+        <div class="doctor-card">
+            <img src="https://via.placeholder.com/250x200" alt="Dr. Veena">
+            <h3>Dr. Veena</h3>
+            <p>Specialist in Cosmetic Dentistry</p>
+        </div>
+        <div class="doctor-card">
+            <img src="https://via.placeholder.com/250x200" alt="Dr. Navin Kumar">
+            <h3>Dr. Navin Kumar</h3>
+            <p>Specialist in Orthodontics</p>
+        </div>
+    </div>
 </div>
 
 <div class="content" id="contact">
@@ -194,12 +214,6 @@
     <p><strong>Address 2:</strong> Bank of India Road, West RamKrishna, New Bypass, Patna, 800027</p>
     <p><strong>Phone:</strong> +1 234 567 890</p>
     <p><strong>Email:</strong> contact@mvndentalcare.com</p>
-</div>
-
-<div class="content" id="doctors">
-    <h2>Our Doctors</h2>
-    <p><strong>Dr. Veena</strong> - Specialist in Cosmetic Dentistry</p>
-    <p><strong>Dr. Navin Kumar</strong> - Specialist in Orthodontics</p>
 </div>
 
 <footer>
