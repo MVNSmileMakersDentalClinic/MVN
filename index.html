@@ -5,80 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MVN Smile Makers Dental Care</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Global Styles */
+        * {
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
             color: #333;
+            line-height: 1.6;
         }
         header {
-            background: #00aaff;
+            background: linear-gradient(to right, #00aaff, #0077cc);
             color: white;
-            padding: 1rem 0;
             text-align: center;
+            padding: 1.5rem;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
         }
         nav {
+            display: flex;
+            justify-content: center;
             background: #f4f4f4;
-            padding: 1rem;
-            text-align: center;
+            padding: 0.8rem 0;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #00aaff;
             font-weight: bold;
+            color: #00aaff;
+            transition: color 0.3s;
         }
         nav a:hover {
             color: #005f80;
         }
         .hero {
-            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-            height: 300px;
-            text-align: center;
-            color: white;
+            background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+            height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
+            text-align: center;
         }
         .hero h1 {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 1rem;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px #000;
         }
         .content {
-            padding: 2rem;
+            padding: 2rem 1.5rem;
             text-align: center;
         }
         .content h2 {
+            font-size: 2rem;
             color: #00aaff;
+            margin-bottom: 1rem;
         }
         .services {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 2rem;
-            flex-wrap: wrap;
         }
         .service {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            padding: 1rem;
-            width: 250px;
-            text-align: center;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        .service:hover {
+            transform: scale(1.05);
         }
         .service img {
             width: 100%;
-            border-radius: 8px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service h3 {
+            font-size: 1.5rem;
+            color: #0077cc;
+            margin: 1rem 0;
+        }
+        .service p {
+            padding: 0 1rem 1rem;
+            font-size: 1rem;
+            color: #555;
+        }
+        .cta {
+            background: linear-gradient(to right, #00aaff, #0077cc);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .cta h2 {
+            font-size: 2rem;
+        }
+        .cta button {
+            background: white;
+            color: #0077cc;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+        .cta button:hover {
+            background: #005f80;
+            color: white;
         }
         footer {
             background: #333;
             color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1rem;
+            font-size: 0.9rem;
         }
         footer a {
             color: #00aaff;
             text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -93,6 +150,7 @@
     <a href="#about">About Us</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
+    <a href="#doctors">Doctors</a>
 </nav>
 
 <div class="hero">
@@ -108,21 +166,26 @@
     <h2>Our Services</h2>
     <div class="services">
         <div class="service">
-            <img src="https://via.placeholder.com/250" alt="General Checkup">
+            <img src="https://via.placeholder.com/300x200" alt="General Checkup">
             <h3>General Checkup</h3>
             <p>Regular dental exams to maintain oral health.</p>
         </div>
         <div class="service">
-            <img src="https://via.placeholder.com/250" alt="Teeth Whitening">
+            <img src="https://via.placeholder.com/300x200" alt="Teeth Whitening">
             <h3>Teeth Whitening</h3>
             <p>Brighten your smile with our advanced whitening solutions.</p>
         </div>
         <div class="service">
-            <img src="https://via.placeholder.com/250" alt="Orthodontics">
+            <img src="https://via.placeholder.com/300x200" alt="Orthodontics">
             <h3>Orthodontics</h3>
             <p>Braces and aligners for straight and perfect teeth.</p>
         </div>
     </div>
+</div>
+
+<div class="cta">
+    <h2>Schedule Your Appointment Today!</h2>
+    <button>Book Now</button>
 </div>
 
 <div class="content" id="contact">
@@ -135,8 +198,8 @@
 
 <div class="content" id="doctors">
     <h2>Our Doctors</h2>
-    <p><strong>1.</strong> Dr. Veena</p>
-    <p><strong>2.</strong> Dr. Navin Kumar</p>
+    <p><strong>Dr. Veena</strong> - Specialist in Cosmetic Dentistry</p>
+    <p><strong>Dr. Navin Kumar</strong> - Specialist in Orthodontics</p>
 </div>
 
 <footer>
