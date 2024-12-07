@@ -3,99 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVN Dental Clinic</title>
+    <title>BrightSmile Dental Clinic</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            line-height: 1.6;
+            color: #333;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
+            background: #00aaff;
+            color: white;
+            padding: 1rem 0;
             text-align: center;
         }
         nav {
-            background-color: #555;
-            color: #fff;
-            padding: 10px;
+            background: #f4f4f4;
+            padding: 1rem;
             text-align: center;
         }
         nav a {
-            color: #fff;
+            margin: 0 15px;
             text-decoration: none;
-            margin: 0 10px;
+            color: #00aaff;
+            font-weight: bold;
         }
-        section {
-            padding: 20px;
+        nav a:hover {
+            color: #005f80;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            height: 300px;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero h1 {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+        }
+        .content {
+            padding: 2rem;
+            text-align: center;
+        }
+        .content h2 {
+            color: #00aaff;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .service {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            width: 250px;
+            text-align: center;
+        }
+        .service img {
+            width: 100%;
+            border-radius: 8px;
         }
         footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
+            background: #333;
+            color: white;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 1rem 0;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            padding: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="MVN_Cover.jpeg" alt="MVN Dental Clinic Cover Image">
-        <h1>MVN Dental Clinic</h1>
-    </header>
-    <nav>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to MVN Dental Clinic, where we provide quality dental care services to our patients.</p>
-        <p>Our team of experienced dentists and staff are committed to ensuring your oral health and providing personalized care.</p>
-    </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Regular Check-ups and Cleanings</li>
-            <li>Teeth Whitening</li>
-            <li>Fillings and Restorations</li>
-            <li>Extractions</li>
-            <li>Root Canal Therapy</li>
-            <li>Dental Implants</li>
-        </ul>
-    </section>
-    <section id="gallery">
-        <h2>Photo Gallery</h2>
-        <div class="gallery">
-            <img src="photo1.jpg" alt="Photo 1">
-            <img src="photo2.jpg" alt="Photo 2">
-            <img src="photo3.jpg" alt="Photo 3">
-            <!-- Add more images here -->
+
+<header>
+    <h1>BrightSmile Dental Clinic</h1>
+    <p>Your Smile, Our Priority</p>
+</header>
+
+<nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1>Healthy Teeth, Happy Life</h1>
+</div>
+
+<div class="content" id="about">
+    <h2>About Us</h2>
+    <p>Welcome to BrightSmile Dental Clinic, where we provide the best dental care for you and your family. With years of experience and state-of-the-art technology, we ensure you leave with a brighter smile every time.</p>
+</div>
+
+<div class="content" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <img src="https://via.placeholder.com/250" alt="General Checkup">
+            <h3>General Checkup</h3>
+            <p>Regular dental exams to maintain oral health.</p>
         </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or would like to schedule an appointment, please feel free to contact us:</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: info@mvndentalclinic.com</p>
-    </section>
-    <footer>
-        &copy; 2024 MVN Dental Clinic. All rights reserved.
-    </footer>
+        <div class="service">
+            <img src="https://via.placeholder.com/250" alt="Teeth Whitening">
+            <h3>Teeth Whitening</h3>
+            <p>Brighten your smile with our advanced whitening solutions.</p>
+        </div>
+        <div class="service">
+            <img src="https://via.placeholder.com/250" alt="Orthodontics">
+            <h3>Orthodontics</h3>
+            <p>Braces and aligners for straight and perfect teeth.</p>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="contact">
+    <h2>Contact Us</h2>
+    <p>Address: 123 Smile Street, Dental City</p>
+    <p>Phone: +1 234 567 890</p>
+    <p>Email: contact@brightsmile.com</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 BrightSmile Dental Clinic. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+</footer>
+
 </body>
 </html>
